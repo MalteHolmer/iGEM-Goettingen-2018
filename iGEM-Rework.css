@@ -1,0 +1,116 @@
+/* Overriding standard styles */
+
+.logo_2018 {
+  display: none;
+}
+
+#top_title {
+  display: none;
+}
+
+#content {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+/*#####BASE#####*/
+
+body {
+  background-color: #E0D7CE;
+  font-size: 80%;
+}
+
+#bodyContent {
+  margin: 0;
+  padding: none;
+}
+
+#bodyContent a {
+  color: #FEDC54;
+  font-weight: bold;
+}
+
+#bodyContent a:visited {
+  color: #B19A3A;
+}
+
+#bodyContent a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#bodyContent h1, #bodyContent h2, #bodyContent h3 {
+  padding: 0px;
+  margin: 10px;
+  overflow: visible;
+}
+
+#bodyContent table, #bodyContent th, #bodyContent td {
+  border: none;
+}
+
+#bodyContent table {
+  margin: 10px;
+}
+
+#bodyContent th {
+  background-color: #FEDC54;
+  font-size: 1.1em;
+}
+
+#bodyContent td {
+  background-color: #ECE7E1;
+}
+
+#bodyContent td:first-child, #bodyContent th:first-child {
+  border-right: 1px solid black;
+}
+
+#bodyContent td:last-child, #bodyContent th:last-child {
+  border-left: 1px solid black;
+}
+
+#bodyContent, #bodyContent p {
+  font-size: 1em;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+#bodyContent p {
+  margin: 0px;
+  padding: 10px;
+}
+
+#bodyContent img {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/*#####LAYOUT#####*/
+
+header {
+  background-color: blue;
+}
+
+nav {
+  flex: 0 0 20%;
+  background-color: red;
+  height: 200px;
+}
+
+article {
+  flex: 0 0 80%;
+  background-color: green;
+}
+
+
+footer {
+  background-color: grey;
+}
+
+l-content_wrapper {
+  display: flex;
+  flex-direction: row;
+}
