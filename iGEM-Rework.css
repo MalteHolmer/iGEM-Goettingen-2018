@@ -99,22 +99,20 @@ body {
 
 #bodyContent #content_menu_wrapper {
     padding-bottom: 2%;
-}
-
-#bodyContent #content_menu_wrapper::before {
-    content: "";
-
-    height: 100%;
-    width: 100%;
-    position: fixed;
-
-    background: url("images/Corn_aspect_9_10.png") no-repeat 100% auto;
-
+    background-image: url("images/Corn_aspect_9_10.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 900px;
+    background-attachment: fixed;
 }
 
 @media only screen and (max-width: 900px) and (max-aspect-ratio: 6/10) {
     #bodyContent #content_menu_wrapper {
-        background: url("images/Corn_aspect_6_10.png") bottom left/auto 100% no-repeat fixed;
+        background-image: url("images/Corn_aspect_9_10.png");
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: auto 100%;
+        background-attachment: fixed;
     }
 }
 
