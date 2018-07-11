@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"
-      dir="ltr"
-      class="client-nojs">
+<html lang="en" dir="ltr" class="client-nojs">
 
 <head>
     <meta charset="UTF-8" />
@@ -176,6 +174,7 @@
             mw.loader.load(["mediawiki.page.startup", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
         }
     </script>
+
 </head>
 
 <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Team_Goettingen_Parts skin-igem action-view">
@@ -184,20 +183,17 @@
     <link rel='stylesheet' type='text/css' href='/common/tablesorter/themes/groupparts/style.css' />
     <link rel='stylesheet' type='text/css' href='/common/table_styles.css' />
 
-    <link rel="stylesheet" href="iGEM-Rework.css" />
     <script type='text/javascript' src='/wiki/skins/Igem/resources/2018_skin.js'></script>
 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="iGEM-Rework.css" />
+    <script src="iGEM-Rework.js"></script>
 
     <div id='globalWrapper'>
         <div id='top_menu_under' class='noprint'></div>
         <div id='top_menu_14' class='noprint'>Loading menubar.....</div>
         <!-- Will be replaced with the jQuery.load -->
-        <script>
-            jQuery('#top_menu_14').load('http://2018.igem.org/cgi/top_menu_14/menubar_reply.cgi', {
-                t: "Team%3AGoettingen%2FParts",
-                a: "View+%2FTeam%3AGoettingen%2FParts++Edit+%2Fwiki%2Findex.php%3Ftitle%3DTeam%3AGoettingen%2FParts%26action%3Dedit++History+%2Fwiki%2Findex.php%3Ftitle%3DTeam%3AGoettingen%2FParts%26action%3Dhistory++Move+%2FSpecial%3AMovePage%2FTeam%3AGoettingen%2FParts++Unwatch+%2Fwiki%2Findex.php%3Ftitle%3DTeam%3AGoettingen%2FParts%26action%3Dunwatch%26token%3Dd6807ddd1e920baad9aa1a785a2c9bec%252B%255C++Page+%2FTeam%3AGoettingen%2FParts++Discussion+%2Fwiki%2Findex.php%3Ftitle%3DTalk%3ATeam%3AGoettingen%2FParts%26action%3Dedit%26redlink%3D1++"
-            });
-        </script>
 
         <!-- Content div contains HQ_page for HQ styles, Logo and title div, and USER CONTENT -->
         <div id="content" class="mw-body" role="main">
@@ -218,15 +214,71 @@
             <div id="HQ_page">
                 <div id="bodyContent">
                     <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-                        <div>
-                            <div id="main_wrapper">
-                                <div id="navigation">Hallo</div>
+                        <div id="main_wrapper">
+                            <div id="content_menu_wrapper">
+                                <div id="navigation" class="sidebar">
+                                    <a href="http://2018.igem.org/Team:Goettingen" class="sidebar-items">Home</a>
+                                    <button class="dropdown_button sidebar-items">Team</button>
+                                    <div class="sidebar-dropdown is-hidden">
+                                        <a href="http://2018.igem.org/Team:Goettingen/Team" class="sidebar-items sidebar-drop_items">Team Members</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Collaborations" class="sidebar-items sidebar-drop_items">Collaborations</a>
+                                    </div>
+                                    <button class="dropdown_button sidebar-items">Project</button>
+                                    <div class="sidebar-dropdown is-hidden">
+                                        <a href="http://2018.igem.org/Team:Goettingen/Description" class="sidebar-items sidebar-drop_items">Description</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Design" class="sidebar-items sidebar-drop_items">Design</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Experiments" class="sidebar-items sidebar-drop_items">Experiments</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Notebook" class="sidebar-items sidebar-drop_items">Notebook</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/InterLab" class="sidebar-items sidebar-drop_items">InterLab</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Model" class="sidebar-items sidebar-drop_items">Model</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Results" class="sidebar-items sidebar-drop_items">Results</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Demonstrate" class="sidebar-items sidebar-drop_items">Demonstrate</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Improve" class="sidebar-items sidebar-drop_items">Improve</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Attributions" class="sidebar-items sidebar-drop_items">Attributions</a>
+                                    </div>
+                                    <button class="dropdown_button sidebar-items">Parts</button>
+                                    <div class="sidebar-dropdown is-hidden">
+                                        <a href="http://2018.igem.org/Team:Goettingen/Parts" class="sidebar-items sidebar-drop_items">Parts Overview</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Basic_Part" class="sidebar-items sidebar-drop_items">Basic Parts</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Composite_Part" class="sidebar-items sidebar-drop_items">Composite Parts</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Part_Collection" class="sidebar-items sidebar-drop_items">Part Collection</a>
+                                    </div>
+                                    <a href="http://2018.igem.org/Team:Goettingen/Safety" class="sidebar-items">Safety</a>
+                                    <button class="dropdown_button sidebar-items">Human Practices</button>
+                                    <div class="sidebar-dropdown is-hidden">
+                                        <a href="http://2018.igem.org/Team:Goettingen/Human_Practices" class="sidebar-items sidebar-drop_items">Human Practices</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Public_Engagement" class="sidebar-items sidebar-drop_items">Education & Engagement</a>
+                                    </div>
+                                    <button class="dropdown_button sidebar-items">Awards</button>
+                                    <div class="sidebar-dropdown is-hidden">
+                                        <a href="http://2018.igem.org/Team:Goettingen/Applied_Design" class="sidebar-items sidebar-drop_items">Applied Design</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Entrepreneurship" class="sidebar-items sidebar-drop_items">Entrepreneurship</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Measurement" class="sidebar-items sidebar-drop_items">Measurement</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Model" class="sidebar-items sidebar-drop_items">Model</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Plant" class="sidebar-items sidebar-drop_items">Plant</a>
+                                        <a href="http://2018.igem.org/Team:Goettingen/Software" class="sidebar-items sidebar-drop_items">Software</a>
+                                    </div>
+                                    <div class="l-triangle">
+                                        <div class="l-three_col">
+                                            <a class="social_items" target="_blank" href="https://www.facebook.com/IGEM2018/">
+                            <img class="facebook" src="http://2018.igem.org/wiki/images/9/90/T--Goettingen--social-facebook.png" alt="Facebook-Button">
+                        </a>
+                                            <a class="social_items" target="_blank" href="https://twitter.com/GoIgem">
+                            <img class="social_items" src="http://2018.igem.org/wiki/images/1/18/T--Goettingen--social-twitter.png" alt="Twitter-Button">
+                        </a>
+                                            <a class="social_items" target="_blank" href="https://www.instagram.com/igem_goettingen_2018/">
+                            <img class="instagram" src="http://2018.igem.org/wiki/images/c/c2/T--Goettingen--social-instagram.png" alt="Instagram-Button">
+                        </a>
+                                        </div>
+                                        <div class="l-triangle-down"></div>
+                                    </div>
+                                </div>
                                 <div id="main_content">
                                     <h1>Hallo</h1>
                                     <h2>Hallo</h2>
                                     <h3>Hallo</h3>
                                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <a>link</a> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. <span>Span inside the text</span>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <a>link</a> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. <span>Span inside the text</span>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
                                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <a>link</a> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. <span>Span inside the text</span>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <a>link</a> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. <span>Span inside the text</span>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                                     <table>
@@ -254,7 +306,6 @@
                     <div class="visualClear"></div>
                 </div>
             </div>
-
         </div>
     </div>
 </body>

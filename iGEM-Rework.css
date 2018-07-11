@@ -32,6 +32,10 @@ body {
     font-weight: bold;
 }
 
+#bodyContent a[href ^="https://"] {
+    padding: 0;
+}
+
 #bodyContent a:visited {
     color: #B19A3A;
 }
@@ -56,7 +60,7 @@ body {
 }
 
 #bodyContent table {
-    margin: 10px;
+    margin: 10px auto;
 }
 
 #bodyContent th {
@@ -91,14 +95,12 @@ body {
 
 #bodyContent img {
     width: 100%;
-    padding: 10px;
     box-sizing: border-box;
 }
 
 /*#####LAYOUT#####*/
 
 #bodyContent #content_menu_wrapper {
-    padding-bottom: 2%;
     background-image: url("images/Corn_aspect_9_10.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -119,19 +121,21 @@ body {
 @media only screen and (min-width: 900px) {
     #bodyContent #content_menu_wrapper {
         display: flex;
+
         justify-content: space-between;
     }
 
     #bodyContent #main_wrapper {
         width: 900px;
         margin: 0 auto;
+
+        box-shadow: 5px 5px 5px grey;
+
     }
 }
 
 #bodyContent #navigation {
     flex-basis: 20%;
-    background-color: red;
-    height: 200px;
     display: none;
 }
 
@@ -142,15 +146,19 @@ body {
 }
 
 #bodyContent #main_content {
-    flex-basis: 78%;
+    flex-basis: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+
     background-color: rgba(100, 100, 100, 0.2);
-    height: 2000px;
 }
 
 
 #bodyContent #footer {
-    background-color: grey;
     width: 100%;
+
+    background-color: grey;
+
 }
 
 .l-three_col {
@@ -159,6 +167,98 @@ body {
 }
 
 .l-three_col-columns {
-    flex-basis: 31%;
-    height: 100px;
+    flex-grow: 1;
+}
+
+/*#####MODULES#####*/
+
+@-webkit-keyframes fading {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fading {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#bodyContent .sidebar {}
+
+#bodyContent .sidebar-items {
+    display: block;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    box-sizing: border-box;
+
+    border: none;
+
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+
+    background: #3E3E3E url("http://2018.igem.org/wiki/images/e/eb/T--Goettingen--sidemenu_bg.png") left bottom/contain no-repeat;
+}
+
+#bodyContent .sidebar-items:hover {
+    background-color: #FEDC54;
+
+    color: #3E3E3E;
+    text-decoration: none;
+
+    transition: 0.5s ease-out;
+    cursor: pointer;
+}
+
+#bodyContent .sidebar-items:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#bodyContent .sidebar-drop_items {
+    padding: 5px 0px 5px 20px;
+
+    font-size: 0.8em;
+    text-align: left;
+
+    background: #585858 url("http://2018.igem.org/wiki/images/e/eb/T--Goettingen--sidemenu_bg.png") left bottom/75% no-repeat;
+
+}
+
+#bodyContent .sidebar-items.is-active {
+    background-color: #FEDC54;
+
+    color: #3E3E3E;
+}
+
+.sidebar-dropdown.is-hidden {
+    display: none;
+}
+
+.l-triangle {
+    background-color: blue;
+    width: 100%;
+    padding-top: 140%;
+    position: relative;
+    overflow: hidden;
+}
+
+.triangle_down_inside {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-color: #3E3E3E;
+    transform: rotate(-45deg);
+    transform-origin: 0% 100%;
 }
