@@ -36,6 +36,10 @@ body {
     padding: 0;
 }
 
+#bodyContent div {
+    text-align: justify;
+}
+
 #bodyContent a:visited {
     color: #B19A3A;
 }
@@ -61,6 +65,7 @@ body {
 
 #bodyContent table {
     margin: 10px auto;
+    white-space: normal;
 }
 
 #bodyContent th {
@@ -70,6 +75,11 @@ body {
 
 #bodyContent td {
     background-color: #ECE7E1;
+}
+
+#bodyContent td,
+th {
+    word-break: normal;
 }
 
 #bodyContent td:first-child,
@@ -94,7 +104,6 @@ body {
 }
 
 #bodyContent img {
-    width: 100%;
     box-sizing: border-box;
 }
 
@@ -118,13 +127,15 @@ body {
     }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 600px) {
     #bodyContent #content_menu_wrapper {
         display: flex;
 
         justify-content: space-between;
     }
+}
 
+@media only screen and (min-width: 900px) {
     #bodyContent #main_wrapper {
         width: 900px;
         margin: 0 auto;
@@ -135,13 +146,23 @@ body {
 }
 
 #bodyContent #navigation {
+    display: block;
     flex-basis: 20%;
-    display: none;
+    margin-bottom: 20%;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (max-width: 600px) {
     #bodyContent #navigation {
         display: block;
+        flex-basis: 100%;
+        margin-bottom: 0%;
+        position: absolute;
+        right: 0px;
+        width: 40%;
+    }
+
+    #bodyContent #navigation.is-nav-hidden {
+        display: none;
     }
 }
 
@@ -156,46 +177,93 @@ body {
 
 #bodyContent #footer {
     width: 100%;
-
-    background-color: grey;
-
+    position: relative;
+    background-color: #3E3E3E;
 }
 
 .l-three_col {
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
 }
 
-.l-three_col-columns {
-    flex-grow: 1;
+.l-three_col > * {
+    padding-top: 1.6%;
+    flex: 0 1 30%;
+}
+
+@media only screen and (max-width: 650px) {
+    #footer.l-three_col {
+        flex-wrap: wrap;
+    }
+    #footer.l-three_col > * {
+        flex: 0 0 45%;
+        order: 1;
+    }
+
+    #footer.l-three_col > .contact {
+        order: 2;
+        flex: 0 0 50%;
+    }
+}
+
+
+.l-three_col-social {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+
+.l-three_col-social > * {
+    flex: 0 0 23%;
+    z-index: 1;
+}
+
+.l-three_col-social img {
+    border-radius: 25%;
+    width: 100%;
+}
+
+.l-three_col-social img:hover {
+    transform: scale(1.1);
+    transition: all ease-in 0.3s;
 }
 
 /*#####MODULES#####*/
 
-@-webkit-keyframes fading {
-    from {
-        opacity: 0.5;
-    }
-    to {
-        opacity: 1;
-    }
+#bodyContent .nav-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 14vw;
+    height: 8vw;
+
+    background-color: #3E3E3E;
+
+    border: none;
+    border-radius: 10%;
+
+    font-size: 4vw;
+    font-weight: bold;
+    color: white;
 }
 
-@keyframes fading {
-    from {
-        opacity: 0.5;
-    }
-    to {
-        opacity: 1;
-    }
+#bodyContent .nav-button:hover {
+    background-color: #7E7E7E;
+
+    color: #3E3E3E;
+
+    transition: all ease-in 0.2s;
+    cursor: pointer;
 }
+
 
 #bodyContent .sidebar {}
 
 #bodyContent .sidebar-items {
     display: block;
     width: 100%;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 10px 10px 20px;
     box-sizing: border-box;
 
     border: none;
@@ -203,10 +271,21 @@ body {
     color: white;
     font-size: 1em;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     line-height: 1.5;
 
     background: #3E3E3E url("http://2018.igem.org/wiki/images/e/eb/T--Goettingen--sidemenu_bg.png") left bottom/contain no-repeat;
+}
+
+@media only screen and (max-width: 600px) {
+    #bodyContent .sidebar-items {
+
+        border-bottom: 1px solid grey;
+
+        text-align: center;
+
+        background: #3E3E3E;
+    }
 }
 
 #bodyContent .sidebar-items:hover {
@@ -228,31 +307,41 @@ body {
     padding: 5px 0px 5px 20px;
 
     font-size: 0.8em;
-    text-align: left;
 
     background: #585858 url("http://2018.igem.org/wiki/images/e/eb/T--Goettingen--sidemenu_bg.png") left bottom/75% no-repeat;
 
 }
 
-#bodyContent .sidebar-items.is-active {
+@media only screen and (max-width: 600px) {
+    #bodyContent .sidebar-drop_items {
+        background: #585858;
+    }
+}
+
+#bodyContent .sidebar .is-sidebar-active {
     background-color: #FEDC54;
 
     color: #3E3E3E;
 }
 
-.sidebar-dropdown.is-hidden {
+#bodyContent .sidebar-dropdown.is-hidden {
     display: none;
 }
 
-.l-triangle {
-    background-color: blue;
+#bodyContent .l-triangle {
     width: 100%;
     padding-top: 140%;
     position: relative;
     overflow: hidden;
 }
 
-.triangle_down_inside {
+@media only screen and (max-width: 600px) {
+    #bodyContent .l-triangle {
+        display: none;
+    }
+}
+
+#bodyContent .l-triangle_down {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -261,4 +350,90 @@ body {
     background-color: #3E3E3E;
     transform: rotate(-45deg);
     transform-origin: 0% 100%;
+}
+
+#bodyContent .l-triangle-absolute {
+    position: absolute;
+    left: 0%;
+    bottom: 100%;
+    width: 20%;
+    padding-top: 20%;
+}
+
+#bodyContent .l-triangle_up {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 300%;
+    height: 300%;
+    background-color: #3E3E3E;
+    transform: rotate(45deg);
+    transform-origin: 0% 0%;
+}
+
+#bodyContent .sponsor_mention span {
+    padding: 0px 5px 0px 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+}
+
+#bodyContent .sponsor_mention-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#bodyContent .sponsor_mention-flex > * {
+    height: 100%;
+    padding: 10px;
+    width: 50%;
+}
+
+#bodyContent .sponsor_mention-flex #sartorius {
+    flex: 0 0 100%;
+}
+
+#bodyContent .sponsor_mention-flex #goettingen {
+    flex: 0 0 50%;
+}
+
+#bodyContent .sponsor_mention-flex #gzmb {
+    flex: 0 0 50%;
+}
+
+#bodyContent .contact table {
+    width: 100%;
+}
+
+#bodyContent .contact table,
+#bodyContent .contact th,
+#bodyContent .contact td,
+#bodyContent .contact tr {
+    font-size: 100%;
+    margin: 0;
+    padding: 0px 5px 0px 5px;
+    line-height: 1;
+    text-align: left;
+
+    color: white;
+
+
+    background-color: transparent;
+
+    border: none;
+}
+
+#bodyContent .contact th,
+#bodyContent .contact td {
+    padding: 2px 5px 2px 5px;
+}
+
+#bodyContent .shout_out p {
+    padding: 0px 5px 0px 5px;
+
+    color: white;
+    font-size: 0.9em;
+    text-align: justify;
 }
