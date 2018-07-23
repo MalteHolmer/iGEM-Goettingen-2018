@@ -1,439 +1,412 @@
 /* Overriding standard styles */
 
 .logo_2018 {
-    display: none;
+  display: none;
 }
 
 #top_title {
-    display: none;
+  display: none;
 }
 
 #content {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: transparent;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
 }
 
 /*#####BASE#####*/
 
 body {
-    background-color: #E0D7CE;
-    font-size: 80%;
+  background-color: #E0D7CE;
+  font-size: 80%;
 }
 
 #bodyContent {
-    margin: 0;
-    padding: none;
+  margin: 0;
+  padding: none;
 }
 
 #bodyContent a {
-    color: #FEDC54;
-    font-weight: bold;
+  color: #FEDC54;
+  font-weight: bold;
 }
 
 #bodyContent a[href ^="https://"] {
-    padding: 0;
+  padding: 0;
 }
 
 #bodyContent div {
-    text-align: justify;
+  text-align: justify;
 }
 
 #bodyContent a:visited {
-    color: #B19A3A;
+  color: #B19A3A;
 }
 
 #bodyContent a:hover {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-#bodyContent h1,
-#bodyContent h2,
-#bodyContent h3 {
-    padding: 0px;
-    margin: 10px;
-    overflow: visible;
+#bodyContent h1, #bodyContent h2, #bodyContent h3 {
+  padding: 10px;
+  margin: 0px;
+  overflow: visible;
 }
 
-#bodyContent table,
-#bodyContent th,
-#bodyContent td {
-    border: none;
+#bodyContent table, #bodyContent th, #bodyContent td {
+  border: none;
 }
 
 #bodyContent table {
-    margin: 10px auto;
-    white-space: normal;
+  margin: 10px auto;
+  white-space: normal;
 }
 
 #bodyContent th {
-    background-color: #FEDC54;
-    font-size: 1.1em;
+  background-color: #FEDC54;
+  font-size: 1.1em;
 }
 
 #bodyContent td {
-    background-color: #ECE7E1;
+  background-color: #ECE7E1;
 }
 
-#bodyContent td,
-th {
-    word-break: normal;
+#bodyContent td, th {
+  word-break: normal;
 }
 
-#bodyContent td:first-child,
-#bodyContent th:first-child {
-    border-right: 1px solid black;
+#bodyContent td:first-child, #bodyContent th:first-child {
+  border-right: 1px solid black;
 }
 
-#bodyContent td:last-child,
-#bodyContent th:last-child {
-    border-left: 1px solid black;
+#bodyContent td:last-child, #bodyContent th:last-child {
+  border-left: 1px solid black;
 }
 
-#bodyContent,
-#bodyContent p {
-    font-size: 1em;
-    font-family: Tahoma, Geneva, sans-serif;
+#bodyContent, #bodyContent p {
+  font-size: 1em;
+  font-family: Tahoma, Geneva, sans-serif;
 }
 
 #bodyContent p {
-    margin: 0px;
-    padding: 10px;
+  margin: 0px;
+  padding: 10px;
 }
 
 #bodyContent img {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*#####LAYOUT#####*/
 
 #bodyContent #content_menu_wrapper {
-    background-image: url("images/Corn_aspect_9_10.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 900px;
-    background-attachment: fixed;
+  background-image: url("images/Corn_aspect_9_10.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 900px;
+  background-attachment: fixed;
 }
 
 @media only screen and (max-width: 900px) and (max-aspect-ratio: 6/10) {
-    #bodyContent #content_menu_wrapper {
-        background-image: url("images/Corn_aspect_9_10.png");
-        background-repeat: no-repeat;
-        background-position: bottom left;
-        background-size: auto 100%;
-        background-attachment: fixed;
-    }
+  #bodyContent #content_menu_wrapper {
+    background-image: url("images/Corn_aspect_9_10.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: auto 100%;
+    background-attachment: fixed;
+  }
 }
 
 @media only screen and (min-width: 600px) {
-    #bodyContent #content_menu_wrapper {
-        display: flex;
-
-        justify-content: space-between;
-    }
+  #bodyContent #content_menu_wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (min-width: 900px) {
-    #bodyContent #main_wrapper {
-        width: 900px;
-        margin: 0 auto;
-
-        box-shadow: 5px 5px 5px grey;
-
-    }
+  #bodyContent #main_wrapper {
+    width: 900px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px grey;
+  }
 }
 
 #bodyContent #navigation {
-    display: block;
-    flex-basis: 20%;
-    margin-bottom: 20%;
+  display: block;
+  flex-basis: 20%;
+  margin-bottom: 20%;
 }
 
 @media only screen and (max-width: 600px) {
-    #bodyContent #navigation {
-        display: block;
-        flex-basis: 100%;
-        margin-bottom: 0%;
-        position: absolute;
-        right: 0px;
-        width: 40%;
-    }
-
-    #bodyContent #navigation.is-nav-hidden {
-        display: none;
-    }
+  #bodyContent #navigation {
+    display: block;
+    flex-basis: 100%;
+    margin-bottom: 0%;
+    position: absolute;
+    right: 0px;
+    width: 40%;
+  }
+  #bodyContent #navigation.is-nav-hidden {
+    display: none;
+  }
 }
 
 #bodyContent #main_content {
-    flex-basis: 80%;
-    padding: 10px;
-    box-sizing: border-box;
-
-    background-color: rgba(100, 100, 100, 0.2);
+  flex-basis: 80%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-
 #bodyContent #footer {
-    width: 100%;
-    position: relative;
-    background-color: #3E3E3E;
+  width: 100%;
+  position: relative;
+  background-color: #3E3E3E;
 }
 
 .l-three_col {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .l-three_col > * {
-    padding-top: 1.6%;
-    flex: 0 1 30%;
+  padding-top: 1.6%;
+  flex: 0 1 30%;
 }
 
 @media only screen and (max-width: 650px) {
-    #footer.l-three_col {
-        flex-wrap: wrap;
-    }
-    #footer.l-three_col > * {
-        flex: 0 0 45%;
-        order: 1;
-    }
-
-    #footer.l-three_col > .contact {
-        order: 2;
-        flex: 0 0 50%;
-    }
+  #footer.l-three_col {
+    flex-wrap: wrap;
+  }
+  #footer.l-three_col > * {
+    flex: 0 0 45%;
+    order: 1;
+  }
+  #footer.l-three_col > .contact {
+    order: 2;
+    flex: 0 0 50%;
+  }
 }
 
-
 .l-three_col-social {
-    position: absolute;
-    top: 20px;
-    width: 100%;
+  position: absolute;
+  top: 20px;
+  width: 100%;
 }
 
 .l-three_col-social > * {
-    flex: 0 0 23%;
-    z-index: 1;
+  flex: 0 0 23%;
+  z-index: 1;
 }
 
 .l-three_col-social img {
-    border-radius: 25%;
-    width: 100%;
+  border-radius: 25%;
+  width: 100%;
 }
 
 .l-three_col-social img:hover {
-    transform: scale(1.1);
-    transition: all ease-in 0.3s;
+  transform: scale(1.1);
+  transition: all ease-in 0.3s;
 }
 
 /*#####MODULES#####*/
 
-#bodyContent .nav-button {
+#bodyContent #show_nav {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #bodyContent #show_nav {
+    display: block;
     position: absolute;
     right: 20px;
     top: 20px;
-    width: 14vw;
-    height: 8vw;
-
+    width: 60px;
+    height: 40px;
     background-color: #3E3E3E;
-
     border: none;
-    border-radius: 10%;
-
-    font-size: 4vw;
+    font-size: 1.5em;
     font-weight: bold;
     color: white;
-}
-
-#bodyContent .nav-button:hover {
+  }
+  #bodyContent #show_nav:hover {
     background-color: #7E7E7E;
-
-    color: #3E3E3E;
-
     transition: all ease-in 0.2s;
     cursor: pointer;
+  }
 }
 
-
-#bodyContent .sidebar {}
-
-#bodyContent .sidebar-items {
-    display: block;
-    width: 100%;
-    padding: 10px 10px 10px 20px;
-    box-sizing: border-box;
-
-    border: none;
-
-    color: white;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: left;
-    line-height: 1.5;
-
-    background: #3E3E3E url("http://2018.igem.org/wiki/images/e/eb/T--Goettingen--sidemenu_bg.png") left bottom/contain no-repeat;
+#bodyContent #close_nav {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
-    #bodyContent .sidebar-items {
+  #bodyContent #close_nav {
+    display: block;
+  }
+}
 
-        border-bottom: 1px solid grey;
+#bodyContent .sidebar-items {
+  display: block;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  box-sizing: border-box;
+  border: none;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.5;
+  background: #3E3E3E url("http://2018.igem.org/wiki/images/e/eb/T--Goettingen--sidemenu_bg.png") left bottom/contain no-repeat;
+}
 
-        text-align: center;
-
-        background: #3E3E3E;
-    }
+@media only screen and (max-width: 600px) {
+  #bodyContent .sidebar-items {
+    border-bottom: 1px solid grey;
+    text-align: center;
+    background: #3E3E3E;
+  }
 }
 
 #bodyContent .sidebar-items:hover {
-    background-color: #FEDC54;
-
-    color: #3E3E3E;
-    text-decoration: none;
-
-    transition: 0.5s ease-out;
-    cursor: pointer;
+  background-color: #FEDC54;
+  color: #3E3E3E;
+  text-decoration: none;
+  transition: 0.5s ease-out;
+  cursor: pointer;
 }
 
 #bodyContent .sidebar-items:visited {
-    color: #ffffff;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 #bodyContent .sidebar-drop_items {
-    padding: 5px 0px 5px 20px;
-
-    font-size: 0.8em;
-
-    background: #585858 url("http://2018.igem.org/wiki/images/e/eb/T--Goettingen--sidemenu_bg.png") left bottom/75% no-repeat;
-
+  padding: 5px 5px 5px 20px;
+  font-size: 0.8em;
+  background: #585858 url("http://2018.igem.org/wiki/images/e/eb/T--Goettingen--sidemenu_bg.png") left bottom/75% no-repeat;
 }
 
 @media only screen and (max-width: 600px) {
-    #bodyContent .sidebar-drop_items {
-        background: #585858;
-    }
+  #bodyContent .sidebar-drop_items {
+    background: #585858;
+  }
 }
 
 #bodyContent .sidebar .is-sidebar-active {
-    background-color: #FEDC54;
-
-    color: #3E3E3E;
+  background-color: #FEDC54;
+  color: #3E3E3E;
 }
 
 #bodyContent .sidebar-dropdown.is-hidden {
-    display: none;
+  display: none;
 }
 
 #bodyContent .l-triangle {
-    width: 100%;
-    padding-top: 140%;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  padding-top: 140%;
+  position: relative;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 600px) {
-    #bodyContent .l-triangle {
-        display: none;
-    }
+  #bodyContent .l-triangle {
+    display: none;
+  }
 }
 
 #bodyContent .l-triangle_down {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background-color: #3E3E3E;
-    transform: rotate(-45deg);
-    transform-origin: 0% 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-color: #3E3E3E;
+  transform: rotate(-45deg);
+  transform-origin: 0% 100%;
 }
 
 #bodyContent .l-triangle-absolute {
-    position: absolute;
-    left: 0%;
-    bottom: 100%;
-    width: 20%;
-    padding-top: 20%;
+  position: absolute;
+  left: 0%;
+  bottom: 100%;
+  width: 20%;
+  padding-top: 20%;
 }
 
 #bodyContent .l-triangle_up {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 300%;
-    height: 300%;
-    background-color: #3E3E3E;
-    transform: rotate(45deg);
-    transform-origin: 0% 0%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 300%;
+  height: 300%;
+  background-color: #3E3E3E;
+  transform: rotate(45deg);
+  transform-origin: 0% 0%;
 }
 
 #bodyContent .sponsor_mention span {
-    padding: 0px 5px 0px 5px;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #ffffff;
-    text-align: left;
+  padding: 0px 5px 0px 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: left;
 }
 
 #bodyContent .sponsor_mention-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 #bodyContent .sponsor_mention-flex > * {
-    height: 100%;
-    padding: 10px;
-    width: 50%;
+  height: 100%;
+  padding: 10px;
+  width: 50%;
 }
 
 #bodyContent .sponsor_mention-flex #sartorius {
-    flex: 0 0 100%;
+  flex: 0 0 100%;
 }
 
 #bodyContent .sponsor_mention-flex #goettingen {
-    flex: 0 0 50%;
+  flex: 0 0 50%;
 }
 
 #bodyContent .sponsor_mention-flex #gzmb {
-    flex: 0 0 50%;
+  flex: 0 0 50%;
 }
 
 #bodyContent .contact table {
-    width: 100%;
+  width: 100%;
 }
 
-#bodyContent .contact table,
-#bodyContent .contact th,
-#bodyContent .contact td,
-#bodyContent .contact tr {
-    font-size: 100%;
-    margin: 0;
-    padding: 0px 5px 0px 5px;
-    line-height: 1;
-    text-align: left;
-
-    color: white;
-
-
-    background-color: transparent;
-
-    border: none;
+#bodyContent .contact table, #bodyContent .contact th, #bodyContent .contact td, #bodyContent .contact tr {
+  font-size: 100%;
+  margin: 0;
+  padding: 0px 5px 0px 5px;
+  line-height: 1;
+  text-align: left;
+  color: white;
+  background-color: transparent;
+  border: none;
 }
 
-#bodyContent .contact th,
-#bodyContent .contact td {
-    padding: 2px 5px 2px 5px;
+#bodyContent .contact th, #bodyContent .contact td {
+  padding: 2px 5px 2px 5px;
 }
 
 #bodyContent .shout_out p {
-    padding: 0px 5px 0px 5px;
+  padding: 0px 5px 0px 5px;
+  color: white;
+  font-size: 0.9em;
+  text-align: justify;
+}
 
-    color: white;
-    font-size: 0.9em;
-    text-align: justify;
+.article {
+  padding: 10px;
+  background-color: rgba(254, 236, 160, 0.8);
 }
