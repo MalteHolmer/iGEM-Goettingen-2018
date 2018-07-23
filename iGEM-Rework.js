@@ -23,12 +23,10 @@ $(document)
       });
 
     $("#show_nav").click(function () {
-      $(this).fadeOut(1000);
       $("#navigation").fadeIn(1000);
     });
 
     $("#close_nav").click(function () {
       $("#navigation").fadeOut(1000);
-      $("#show_nav").fadeIn(1000);
     })
   });

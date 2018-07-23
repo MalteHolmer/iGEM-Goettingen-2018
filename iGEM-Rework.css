@@ -20,6 +20,7 @@
 body {
   background-color: #E0D7CE;
   font-size: 80%;
+  margin: 0px;
 }
 
 #bodyContent {
@@ -143,11 +144,11 @@ body {
 @media only screen and (max-width: 600px) {
   #bodyContent #navigation {
     display: block;
-    flex-basis: 100%;
-    margin-bottom: 0%;
     position: absolute;
     right: 0px;
     width: 40%;
+    border: 1px solid grey;
+    z-index: 999;
   }
   #bodyContent #navigation.is-nav-hidden {
     display: none;
@@ -221,9 +222,7 @@ body {
 @media only screen and (max-width: 600px) {
   #bodyContent #show_nav {
     display: block;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+    margin-left: auto;
     width: 60px;
     height: 40px;
     background-color: #3E3E3E;
@@ -258,6 +257,7 @@ body {
   color: white;
   font-size: 1em;
   font-weight: bold;
+  text-decoration: none;
   text-align: left;
   line-height: 1.5;
   background: #3E3E3E url("http://2018.igem.org/wiki/images/e/eb/T--Goettingen--sidemenu_bg.png") left bottom/contain no-repeat;
