@@ -1,0 +1,105 @@
+/*Video auf der Hauptseite*/
+
+#bodyContent #main-content_glyphvideo {
+  width: 100%;
+  display: block;
+}
+
+#bodyContent .article-main h2 {
+  text-align: center;
+}
+
+#bodyContent .article-main p {
+  font-size: 1.2em;
+}
+
+/*#######################style-sheet for the mindmap like navigator##################*/
+
+#bodyContent .mindmap_topic {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 15px;
+  width: 20%;
+  height: 10%;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #FEDC54;
+  box-shadow: 2px 2px 2px grey;
+  border: 2px solid #3E3E3E;
+
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1;
+
+  opacity: 0;
+  -webkit-transition: background-color 0.2s ease-out, height 0.2s ease-out, opacity 1s ease-out;
+  -moz-transition: background-color 0.2s ease-out, height 0.2s ease-out, opacity 1s ease-out;
+  -o-transition: background-color 0.2s ease-out, height 0.2s ease-out, opacity 1s ease-out;
+  transition: background-color 0.2s ease-out, height 0.2s ease-out, opacity 1s ease-out;
+}
+
+#bodyContent .mindmap_topic:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+#bodyContent #mindmap_wrapper {
+  position: relative;
+  width: 80%;
+  padding-top: 80%;
+  margin: 0 auto 20px auto;
+  z-index: 0;
+}
+
+#bodyContent .mindmap_background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 20%;
+  height: 20%;
+  background: url("http://2018.igem.org/wiki/images/d/dc/T--Goettingen--Main-Page-mindmap-bg2.png") no-repeat center;
+  background-size: 80%;
+}
+
+#bodyContent .mindmap_iGEMLogo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 30%;
+  height: 30%;
+  background-color: white;
+  border: 4px solid #3E3E3E;
+  box-shadow: 5px 5px 20px grey;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+#bodyContent .mindmap_iGEMLogo:hover {
+  transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+}
+
+#bodyContent .mindmap_iGEMLogo img {
+  width: 90%;
+}

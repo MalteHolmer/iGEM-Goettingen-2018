@@ -54,6 +54,8 @@ body {
   padding: 10px;
   margin: 0px;
   overflow: visible;
+  text-align: left;
+  line-height: 1.2em;
 }
 
 #bodyContent table, #bodyContent th, #bodyContent td {
@@ -63,27 +65,16 @@ body {
 #bodyContent table {
   margin: 10px auto;
   white-space: normal;
+  background-color: transparent;
 }
 
 #bodyContent th {
-  background-color: #FEDC54;
   font-size: 1.1em;
-}
-
-#bodyContent td {
-  background-color: #ECE7E1;
+  background-color: transparent;
 }
 
 #bodyContent td, th {
   word-break: normal;
-}
-
-#bodyContent td:first-child, #bodyContent th:first-child {
-  border-right: 1px solid black;
-}
-
-#bodyContent td:last-child, #bodyContent th:last-child {
-  border-left: 1px solid black;
 }
 
 #bodyContent, #bodyContent p {
@@ -104,10 +95,12 @@ body {
 
 #bodyContent #content_menu_wrapper {
   background-image: url("images/Corn_aspect_9_10.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   background-size: 900px;
   background-attachment: fixed;
+
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 900px) and (max-aspect-ratio: 6/10) {
@@ -146,7 +139,7 @@ body {
     display: block;
     position: absolute;
     right: 0px;
-    width: 40%;
+    width: 30%;
     border: 1px solid grey;
     z-index: 999;
   }
@@ -155,10 +148,11 @@ body {
   }
 }
 
-#bodyContent #main_content {
+#bodyContent #main-content {
   flex-basis: 80%;
-  padding: 10px;
   box-sizing: border-box;
+  padding: 0.1px;
+  /*Aus mir unbekannten Gründen, muss das Padding wohl angegeben werden, um das Hintergrund-Bild auf die ganze Seite zu spannen, entweder ein Bug oder ich bin da noch nicht ganz hinter gestiegen*/
 }
 
 #bodyContent #footer {
@@ -188,6 +182,7 @@ body {
   }
   #footer.l-three_col > .contact {
     order: 2;
+    padding-bottom: 1.6%;
     flex: 0 0 50%;
   }
 }
@@ -222,7 +217,7 @@ body {
 @media only screen and (max-width: 600px) {
   #bodyContent #show_nav {
     display: block;
-    margin-left: auto;
+    margin: 10px 10px 10px auto;
     width: 60px;
     height: 40px;
     background-color: #3E3E3E;
@@ -235,16 +230,6 @@ body {
     background-color: #7E7E7E;
     transition: all ease-in 0.2s;
     cursor: pointer;
-  }
-}
-
-#bodyContent #close_nav {
-  display: none;
-}
-
-@media only screen and (max-width: 600px) {
-  #bodyContent #close_nav {
-    display: block;
   }
 }
 
@@ -265,9 +250,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   #bodyContent .sidebar-items {
-    border-bottom: 1px solid grey;
     text-align: center;
-    background: #3E3E3E;
   }
 }
 
@@ -292,7 +275,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   #bodyContent .sidebar-drop_items {
-    background: #585858;
+    background-color: #585858;
   }
 }
 
@@ -348,7 +331,7 @@ body {
   transform-origin: 0% 0%;
 }
 
-#bodyContent .sponsor_mention span {
+#bodyContent .footer_heading {
   padding: 0px 5px 0px 5px;
   font-size: 1.1em;
   font-weight: bold;
@@ -380,6 +363,8 @@ body {
   flex: 0 0 50%;
 }
 
+#bodyContent .contact_heading {}
+
 #bodyContent .contact table {
   width: 100%;
 }
@@ -406,7 +391,44 @@ body {
   text-align: justify;
 }
 
-.article {
+/* Haupt-Template für die Artikel, dies wird auch als Vorlage für die anderen genutzt */
+
+#bodyContent .article {
+  margin: 10px;
   padding: 10px;
-  background-color: rgba(254, 236, 160, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#bodyContent .head-line {
+  background-color: #FEDC54;
+  transform: skewX(-20deg);
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  box-shadow: 3px 3px 3px grey;
+}
+
+#bodyContent .head-line > * {
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+  transform: skewX(20deg);
+}
+
+/*Content-Table wird verwendet für Tabellen jeder Art, die Informationen in einem spalten-orientieren Aufbau enthalten*/
+
+#bodyContent .content-table th {
+  background-color: #FEDC54;
+}
+
+#bodyContent .content-table td {
+  background-color: #ECE7E1;
+}
+
+#bodyContent .content-table td:first-child, #bodyContent .content-table th:first-child {
+  border-right: 1px solid black;
+}
+
+#bodyContent .content-table td:last-child, #bodyContent .content-table th:last-child {
+  border-left: 1px solid black;
 }

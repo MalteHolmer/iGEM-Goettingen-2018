@@ -22,11 +22,20 @@ $(document)
         }
       });
 
-    $("#show_nav").click(function () {
-      $("#navigation").fadeIn(1000);
+    $("#show_nav").click(function (event) {
+      var nav = $("#navigation");
+      if (!nav.hasClass("is-nav-active")) {
+        nav.fadeIn(1000);
+        nav.addClass("is-nav-active");
+      }
     });
 
-    $("#close_nav").click(function () {
-      $("#navigation").fadeOut(1000);
+    $(document).click(function (event) {
+      var nav = $("#navigation");
+      //kleiner Hack, damit wirklich nur ein Anklicken irgendwo außer im Menü dieses verschwidnen lässt
+      if (nav.hasClass("is-nav-active") && nav.find(event.target).length == 0 && event.target != $("#show_nav").get(0)) {
+        nav.fadeOut(1000);
+        nav.removeClass("is-nav-active");
+      };
     })
   });
