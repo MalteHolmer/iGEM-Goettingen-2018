@@ -1,0 +1,602 @@
+/* Overriding standard styles */
+
+.logo_2018 {
+  display: none;
+}
+
+#top_title {
+  display: none;
+}
+
+#content {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+#mw-content-text > p {
+  display: none;
+}
+
+/*#####BASE#####*/
+
+body {
+  background: #E0D7CE url("http://2018.igem.org/wiki/images/8/8d/T--Goettingen--Main-Page-glyph_background.png") no-repeat fixed;
+  background-size: cover;
+  font-size: 80%;
+  margin: 0;
+  width: 100%;
+}
+
+#bodyContent {
+  margin: 0;
+  padding: none;
+}
+
+#bodyContent a {
+  color: #FEDC54;
+  font-weight: bold;
+}
+
+#bodyContent a[href ^="https://"] {
+  padding: 0;
+}
+
+#bodyContent div {
+  text-align: justify;
+}
+
+#bodyContent a:visited {
+  color: #B19A3A;
+}
+
+#bodyContent a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4 {
+  padding: 5px 10px;
+  margin: 0px;
+  overflow: visible;
+  text-align: left;
+  line-height: 1.2em;
+}
+
+#bodyContent table, #bodyContent th, #bodyContent td {
+  border: none;
+}
+
+#bodyContent table {
+  margin: 10px auto;
+  white-space: normal;
+  background-color: transparent;
+}
+
+#bodyContent th {
+  font-size: 1.1em;
+  background-color: transparent;
+}
+
+#bodyContent td, th {
+  word-break: normal;
+}
+
+#bodyContent, #bodyContent p {
+  font-size: 1em;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+#bodyContent p {
+  margin: 0;
+  padding: 10px;
+}
+
+#bodyContent img {
+  box-sizing: border-box;
+}
+
+/*#####LAYOUT#####*/
+
+#bodyContent #header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #3E3E3E;
+  border-bottom: 5px solid #5E5E5E;
+}
+
+#bodyContent #header_logo {
+  flex: 1 0;
+  height: 60px;
+  margin: auto;
+  padding-right: 10px;
+  align-self: center;
+}
+
+#bodyContent #header_logo img {
+  height: 100%;
+  float: right;
+}
+
+#bodyContent #header_team {
+  flex: 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+#bodyContent #header_middle {
+  display: flex;
+  flex: 3 0;
+}
+
+#bodyContent #header_middle-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 85px;
+  padding: 6px 18px 6px 18px;
+  box-sizing: border-box;
+  background-color: #3E3E3E;
+  border-left: 5px solid #5E5E5E;
+  border-right: 5px solid #5E5E5E;
+  border-bottom: 5px solid #5E5E5E;
+}
+
+#bodyContent #header_middle-container img {
+  height: 100%;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 600px) {
+  #bodyContent #header_middle-container img {
+    height: auto;
+    width: 75%;
+  }
+  #bodyContent #header_middle-container {
+    padding: 2px;
+  }
+}
+
+#bodyContent #content_menu_wrapper {
+  background-image: url("http://2018.igem.org/wiki/images/9/91/T--Goettingen--Main-Page-background.png");
+  background-repeat: repeat;
+  background-position: bottom;
+  background-size: 1000px;
+  /*etwas unsauber, ist eigentlich 900px aber dann muss ich das bild neu zuschneiden*/
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) and (max-aspect-ratio: 6/10) {
+  #bodyContent #content_menu_wrapper {
+    background-image: url("http://2018.igem.org/wiki/images/0/05/T--Goettingen--Main-Page-background_6_10.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: auto 100%;
+    background-attachment: fixed;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #bodyContent #content_menu_wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+#bodyContent #main_wrapper {
+  background-color: #E0D7CE;
+}
+
+@media only screen and (min-width: 900px) {
+  #bodyContent #main_wrapper {
+    width: 900px;
+    margin: 0 auto;
+    border-bottom: 5px solid #5E5E5E;
+    border-right: 5px solid #5E5E5E;
+    border-left: 5px solid #5E5E5E;
+    box-sizing: border-box;
+  }
+}
+
+#bodyContent #navigation {
+  display: block;
+  flex-basis: 20%;
+  margin-bottom: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+  #bodyContent #navigation {
+    display: block;
+    position: fixed;
+    top: 103px;
+    left: 0px;
+    width: 30%;
+    border-bottom: 5px solid #5E5E5E;
+    border-right: 5px solid #5E5E5E;
+    z-index: 999;
+  }
+  #bodyContent #navigation.is-nav-hidden {
+    display: none;
+  }
+}
+
+#bodyContent #main-content {
+  flex-basis: 80%;
+  box-sizing: border-box;
+  padding: 0.1px;
+  /*Aus mir unbekannten Gründen, muss das Padding wohl angegeben werden, um das Hintergrund-Bild auf die ganze Seite zu spannen, entweder ein Bug oder ich bin da noch nicht ganz hinter gestiegen*/
+}
+
+#bodyContent #footer {
+  width: 100%;
+  position: relative;
+  background-color: #3E3E3E;
+}
+
+#bodyContent .l-two-col {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px;
+}
+
+#bodyContent .l-two-col > * {
+  flex: 0 0 50%;
+}
+
+#bodyContent .l-three_col {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+#bodyContent .l-three_col > * {
+  flex: 0 1 30%;
+}
+
+#bodyContent .l-three_col-social {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+}
+
+#bodyContent .l-three_col-social > * {
+  flex: 0 0 23%;
+  z-index: 1;
+}
+
+#bodyContent .l-three_col-social img {
+  border-radius: 25%;
+  width: 100%;
+}
+
+.l-three_col-social img:hover {
+  transform: scale(1.1);
+  transition: all ease-in 0.3s;
+}
+
+/*#####MODULES#####*/
+
+#bodyContent .control-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 40px;
+  background-color: #3E3E3E;
+  border: 2px solid #FEDC54;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  z-index: 999;
+}
+
+#top-scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#bodyContent .control-button:hover {
+  background-color: #7E7E7E;
+  transition: all ease-in 0.2s;
+  cursor: pointer;
+}
+
+#bodyContent #show_nav {
+  display: none;
+  position: fixed;
+  left: 20px;
+  top: 122px;
+}
+
+@media only screen and (max-width: 600px) {
+  #bodyContent #show_nav {
+    display: block;
+  }
+}
+
+#bodyContent .sidebar-items {
+  display: block;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  box-sizing: border-box;
+  border: none;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: left;
+  line-height: 1.5;
+  background: #3E3E3E url("http://2018.igem.org/wiki/images/e/eb/T--Goettingen--sidemenu_bg.png") left bottom/contain no-repeat;
+}
+
+@media only screen and (max-width: 600px) {
+  #bodyContent .sidebar-items {
+    text-align: center;
+  }
+}
+
+#bodyContent .sidebar-items:hover {
+  background-color: #FEDC54;
+  color: #3E3E3E;
+  text-decoration: none;
+  transition: 0.5s ease-out;
+  cursor: pointer;
+}
+
+#bodyContent .sidebar-items:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#bodyContent .sidebar-drop_items {
+  padding: 5px 5px 5px 20px;
+  font-size: 0.8em;
+  background: #585858 url("http://2018.igem.org/wiki/../images/e/eb/T--Goettingen--sidemenu_bg.png") left bottom/75% no-repeat;
+}
+
+@media only screen and (max-width: 600px) {
+  #bodyContent .sidebar-drop_items {
+    background-color: #585858;
+  }
+}
+
+#bodyContent .sidebar .is-sidebar-active {
+  background-color: #FEDC54;
+  color: #3E3E3E;
+}
+
+#bodyContent .sidebar-dropdown.is-hidden {
+  display: none;
+}
+
+#bodyContent .l-triangle {
+  width: 100%;
+  padding-top: 140%;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  #bodyContent .l-triangle {
+    display: none;
+  }
+}
+
+#bodyContent .l-triangle_down {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-color: #3E3E3E;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+#bodyContent .l-triangle-absolute {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 20%;
+  padding-top: 20%;
+}
+
+#bodyContent .l-triangle_up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 300%;
+  background-color: #3E3E3E;
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+}
+
+#bodyContent .footer_heading {
+  padding: 0 5px 0 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: left;
+}
+
+#bodyContent .sponsor_mention-flex {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+#bodyContent .sponsor_mention-flex > * {
+  height: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  #bodyContent .sponsor_mention-flex > * {
+    height: 8vw;
+  }
+}
+
+#bodyContent .contact table {
+  width: 100%;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  #bodyContent .contact table {
+    font-size: 2.4vw
+  }
+}
+
+#bodyContent .contact table, #bodyContent .contact th, #bodyContent .contact td, #bodyContent .contact tr {
+  margin: 0;
+  padding: 0 5px 0 0px;
+  line-height: 1;
+  text-align: left;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+#bodyContent .contact th, #bodyContent .contact td {
+  padding: 2px 5px 2px 5px;
+}
+
+#bodyContent .shout_out p {
+  padding: 0 5px 0 5px;
+  color: white;
+  font-size: 1em;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+  #bodyContent .shout_out p {
+    font-size: 2.4vw;
+  }
+}
+
+#bodyContent p.shout_out_wall_of {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  #bodyContent p.shout_out_wall_of {
+    font-size: 3vw;
+  }
+}
+
+/* Haupt-Template für die Artikel, dies wird auch als Vorlage für die anderen genutzt */
+
+#bodyContent .article {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#bodyContent .article_head-line {
+  background-color: #FEDC54;
+  transform: skewX(-20deg);
+  width: 90%;
+  margin: 10px 5%;
+  box-shadow: 3px 3px 3px grey;
+}
+
+#bodyContent .article_head-line > * {
+  clear: both;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  text-align: center;
+  transform: skewX(20deg);
+}
+
+#bodyContent .article_picture {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+#bodyContent .article_picture img {
+  width: 100%;
+}
+
+#bodyContent .article_picture p {
+  text-align: left;
+  font-weight: bold;
+}
+
+#bodyContent .article_picture-left {
+  float: left;
+  width: 30%;
+  padding-left: 10px;
+  padding-right: 15px;
+}
+
+#bodyContent .article_picture-right {
+  float: right;
+  width: 30%;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+#bodyContent .article_clear-left {
+  clear: left;
+}
+
+#bodyContent .article_clear-right {
+  clear: right;
+}
+
+/*Content-Table wird verwendet für Tabellen jeder Art, die Informationen in einem spalten-orientieren Aufbau enthalten*/
+
+#bodyContent .article_table {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#bodyContent .article_table table {
+  margin-top: 0px;
+}
+
+#bodyContent .article_table th, #bodyContent .article_table td {
+  border-left: 1px solid #3E3E3E;
+  border-right: 1px solid #3E3E3E;
+}
+
+#bodyContent .article_table th {
+  background-color: #FEDC54;
+}
+
+#bodyContent .article_table td {
+  background-color: #ECE7E1;
+}
+
+#bodyContent .article_table td:first-child, #bodyContent .article_table th:first-child {
+  border-left: none;
+}
+
+#bodyContent .article_table td:last-child, #bodyContent .article_table th:last-child {
+  border-right: none;
+}
+
+#bodyContent .article_table p {
+  text-align: center;
+  font-weight: bold;
+}

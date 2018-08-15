@@ -1,0 +1,56 @@
+#bodyContent .team-container img {
+  height: 200px;
+  width: 150px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 750px) {
+  #bodyContent .team-container img {
+    height: 150px;
+    width: 112.5px;
+  }
+}
+
+#bodyContent .team-container {
+  display: flex;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: rgba(254, 220, 84, 0.3);
+  background-image: url("http://2018.igem.org/wiki/images/1/15/T--Goettingen--team_member-triangle_deco.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 8% auto;
+  border: 4px solid #3E3E3E;
+}
+
+#bodyContent .team-container table {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 750px) {
+  #bodyContent .team-container table {
+    font-size: 0.8em;
+  }
+}
+
+#bodyContent .team-container td, #bodyContent .team-container th {
+  font-size: 1em;
+  padding: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+#bodyContent .team-container th {
+  padding-right: 5px;
+  width: 35%;
+}
+
+#bodyContent .team-container_description {
+  margin-left: 15px;
+}
+
+#bodyContent .team-container_heading {
+  font-size: 1.5em;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
