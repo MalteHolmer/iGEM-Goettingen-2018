@@ -54,11 +54,15 @@ $(document)
       autoplay: false,
     });
 
-    document.getElementsByClassName("mindmap_iGEMLogo")[0].onclick = function () {
-      spread_out.play();
-      show_background.play();
-    }
+    //scroll-event for the spread-out animation
+    $(document).scroll(function () {
+      if ($(".mindmap_iGEMLogo").isInViewport()) {
+        spread_out.play();
+        show_background.play();
+      }
+    });
 
+    //eventlistener for video-controls
     var video = $("#main-content_glyphvideo");
     video.mouseenter(function () {
       $(this).attr("controls", true);
@@ -70,3 +74,15 @@ $(document)
     video.attr("muted", "true");
     video[0].play();
   });
+
+(function ($) {
+  $.fn.isInViewport = function () {
+    var elementTop = this.offset().top;
+    var elementBottom = elementTop + this.outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  };
+}(jQuery));
