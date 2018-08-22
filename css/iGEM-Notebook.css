@@ -12,6 +12,8 @@
   border: 5px solid #5E5E5E;
   box-sizing: border-box;
   overflow: hidden;
+
+  transition: 0.2s ease-in;
 }
 
 #bodyContent #notebook-menu button:last-of-type {
@@ -28,10 +30,12 @@
   margin: 10px 20px 20px 20px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.9);
-  background-image: url("../images/logo_igem_transparent.png");
-  background-repeat: no-repeat;
-  background-position: 95% 95%;
-  background-size: 20%;
+  background-image: url("../images/logo_igem_transparent.png"),
+  url("../images/punchholes.png"),
+  url("../images/checker-pattern.png");
+  background-repeat: no-repeat, repeat-y, repeat;
+  background-position: bottom right, 4% 0%, top left;
+  background-size: 20%, 3.5%, 20%;
   border: 5px solid #5E5E5E;
   box-sizing: border-box;
 }
@@ -48,6 +52,7 @@
 
 #bodyContent .notebook-head {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 15px;
 }
@@ -60,20 +65,29 @@
 #bodyContent .notebook-head_title {
   flex: 0 0 75%;
   box-sizing: border-box;
+  text-align: center;
 }
 
 #bodyContent .notebook-head_date {
   flex: 0 0 25%;
   padding: 5px 10px;
   text-align: center;
-  background-color: rgba(254, 220, 84, 0.5);
+  background-color: white;
+  border: 3px solid red;
   box-shadow: 3px 3px 3px grey;
+  box-sizing: border-box;
 }
 
 #bodyContent .notebook-table table {
   min-width: 400px;
   padding: 0;
   margin: auto;
+}
+
+@media only screen and (max-width: 700px) {
+  #bodyContent .notebook-table table {
+    min-width: 0;
+  }
 }
 
 #bodyContent .notebook-table td,
@@ -83,4 +97,52 @@
 
 #bodyContent .notebook-table_right {
   text-align: right;
+}
+
+#bodyContent .notebook-content {
+  width: 92%;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+#bodyContent .notebook-dateselect {
+  color: white;
+  z-index: 999;
+  left: 20px;
+  bottom: 20px;
+  background-color: #3E3E3E;
+  padding: 10px;
+  position: fixed;
+  border: 5px solid #5E5E5E;
+}
+
+@media only screen and (max-width: 850px) {
+  #bodyContent .notebook-dateselect {
+    display: none;
+  }
+}
+
+#bodyContent .notebook-dateselect h3 {
+  color: white;
+  border-bottom: 2px solid white;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#bodyContent .notebook-dateselect a {
+  display: block;
+  padding: 0px 5px;
+}
+
+#bodyContent #notebook-menu .notebook-menu-is-active {
+  background-color: #FEDC54;
+  border: 5px solid #feea98;
+  color: black;
+}
+
+#bodyContent #notebook-menu button:hover {
+  background-color: #FEDC54;
+  border: 5px solid #feea98;
+  color: black;
+  cursor: pointer;
 }
