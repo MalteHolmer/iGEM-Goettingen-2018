@@ -585,6 +585,7 @@ th {
 #bodyContent .article_multpicture p {
     text-align: left;
     font-weight: bold;
+    font-size: 0.8em;
 }
 
 #bodyContent .article_multpicture > div {
@@ -599,7 +600,7 @@ th {
 }
 
 #bodyContent .article_multpicture > div > div p {
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 #bodyContent .article_multpicture-triple > div {
@@ -664,4 +665,20 @@ th {
     border-top: 2px solid #3E3E3E;
 }
 
-#bodyContent .article_formula {}
+#bodyContent .article-table_right {
+    text-align: right;
+}
+
+#bodyContent .article_formula {
+    height: 2.5em;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    display: flex;
+    justify-content: center;
+}
+
+#bodyContent .article_formula img {
+    height: 100%;
+    margin: 0;
+}
