@@ -1,148 +1,170 @@
 #bodyContent #notebook-menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #bodyContent #notebook-menu button {
-  color: white;
-  font-size: 1.5em;
-  margin: 10px 5px 10px 0;
-  background-color: #3E3E3E;
-  border: 5px solid #5E5E5E;
-  box-sizing: border-box;
-  overflow: hidden;
+    color: white;
+    font-size: 1.5em;
+    margin: 10px 5px 10px 0;
+    background-color: #3E3E3E;
+    border: 5px solid #5E5E5E;
+    box-sizing: border-box;
+    overflow: hidden;
 
-  transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
 }
 
 #bodyContent #notebook-menu button:last-of-type {
-  margin-right: 0px;
+    margin-right: 0px;
 }
 
 @media only screen and (max-width: 600px) {
-  #bodyContent #notebook-menu button {
-    font-size: 4vw;
-  }
+    #bodyContent #notebook-menu button {
+        font-size: 4vw;
+    }
 }
 
 #bodyContent .notebook-item {
-  margin: 10px 20px 20px 20px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  background-image: url("../images/logo_igem_transparent.png"),
-  url("../images/punchholes.png"),
-  url("../images/checker-pattern.png");
-  background-repeat: no-repeat, repeat-y, repeat;
-  background-position: bottom right, 4% 0%, top left;
-  background-size: 20%, 3.5%, 20%;
-  border: 5px solid #5E5E5E;
-  box-sizing: border-box;
+    margin: 10px 20px 20px 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: url("../images/logo_igem_transparent.png"),
+    url("../images/punchholes.png"),
+    url("../images/checker-pattern.png");
+    background-repeat: no-repeat, repeat-y, repeat;
+    background-position: bottom right, 4% 0%, top left;
+    background-size: 20%, 3.5%, 20%;
+    border: 5px solid #5E5E5E;
+    box-sizing: border-box;
 }
 
 #bodyContent .notebook-item ul {
-  margin-right: 10px;
-  margin-left: 40px;
+    margin: 10px 10px 10px 30px;
+}
+
+#bodyContent .notebook-item ol {
+    margin: 10px 10px 10px 30px;
+}
+
+#bodyContent .notebook-item ul li {
+    list-style: circle outside url(../images/ring-notebook.png);
 }
 
 #bodyContent .notebook-item li {
-  list-style: circle outside url(../images/ring-notebook.png);
-  padding-left: 5px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+#bodyContent .notebook-item li:last-of-type {
+    padding-bottom: 0px;
 }
 
 #bodyContent .notebook-head {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 #bodyContent .notebook-head > p {
-  box-sizing: border-box;
-  font-weight: bold;
+    box-sizing: border-box;
+    font-weight: bold;
 }
 
 #bodyContent .notebook-head_title {
-  flex: 0 0 75%;
-  box-sizing: border-box;
-  text-align: center;
+    flex: 0 0 75%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 #bodyContent .notebook-head_date {
-  flex: 0 0 25%;
-  padding: 5px 10px;
-  text-align: center;
-  background-color: white;
-  border: 3px solid red;
-  box-shadow: 3px 3px 3px grey;
-  box-sizing: border-box;
+    flex: 0 0 25%;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: white;
+    border: 3px solid red;
+    box-shadow: 3px 3px 3px grey;
+    box-sizing: border-box;
 }
 
 #bodyContent .notebook-table table {
-  min-width: 400px;
-  padding: 0;
-  margin: auto;
+    min-width: 400px;
+    padding: 0;
+    margin: auto;
 }
 
 @media only screen and (max-width: 700px) {
-  #bodyContent .notebook-table table {
-    min-width: 0;
-  }
+    #bodyContent .notebook-table table {
+        min-width: 0;
+    }
 }
 
 #bodyContent .notebook-table td,
 #bodyContent .notebook-table th {
-  padding: 5px 10px;
+    padding: 5px 10px;
 }
 
 #bodyContent .notebook-table_right {
-  text-align: right;
+    text-align: right;
 }
 
 #bodyContent .notebook-content {
-  width: 92%;
-  margin-left: auto;
-  margin-bottom: 10px;
+    width: 92%;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+#bodyContent .notebook-content h1,
+#bodyContent .notebook-content h2,
+#bodyContent .notebook-content h3,
+#bodyContent .notebook-content h4,
+#bodyContent .notebook-content h5,
+#bodyContent .notebook-content h6 {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #bodyContent .notebook-dateselect {
-  color: white;
-  z-index: 999;
-  left: 20px;
-  bottom: 20px;
-  background-color: #3E3E3E;
-  padding: 10px;
-  position: fixed;
-  border: 5px solid #5E5E5E;
+    color: white;
+    z-index: 999;
+    left: 20px;
+    bottom: 20px;
+    background-color: #3E3E3E;
+    padding: 10px;
+    position: fixed;
+    border: 5px solid #5E5E5E;
 }
 
 @media only screen and (max-width: 850px) {
-  #bodyContent .notebook-dateselect {
-    display: none;
-  }
+    #bodyContent .notebook-dateselect {
+        display: none;
+    }
 }
 
 #bodyContent .notebook-dateselect h3 {
-  color: white;
-  border-bottom: 2px solid white;
-  margin-bottom: 10px;
-  text-align: center;
+    color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 #bodyContent .notebook-dateselect a {
-  display: block;
-  padding: 0px 5px;
+    display: block;
+    padding: 0px 5px;
 }
 
 #bodyContent #notebook-menu .notebook-menu-is-active {
-  background-color: #FEDC54;
-  border: 5px solid #feea98;
-  color: black;
+    background-color: #FEDC54;
+    border: 5px solid #feea98;
+    color: black;
 }
 
 #bodyContent #notebook-menu button:hover {
-  background-color: #FEDC54;
-  border: 5px solid #feea98;
-  color: black;
-  cursor: pointer;
+    background-color: #FEDC54;
+    border: 5px solid #feea98;
+    color: black;
+    cursor: pointer;
 }
